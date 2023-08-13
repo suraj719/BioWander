@@ -13,7 +13,7 @@ body {
   line-height: 90px;
 }
 .txt-1 {
-color: black;
+  color: black;
   background-color: rgb(156, 190, 117);
   padding-left: 5px;
   transform: rotate(-2.002deg);
@@ -41,13 +41,32 @@ a {
   color: white;
 }
 .home-imgtxt {
-        position: absolute;
-        top: 25%;
-        left: 10%;
-        /* transform: translate(-50%, -50%); */
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  /* transform: translate(-50%, -50%); */
 }
-::placeholder {
-  color:white
+/* ::placeholder {
+  color: white;
+} */
+
+.accmdtn-inp::placeholder{
+  color: white;
+}
+.card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 0.6s;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.post-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: all 0.4s;
+
+}
+.post-card:hover {
+  transform: scale(1.05);
 }
 @media only screen and (max-width: 768px) {
   body {

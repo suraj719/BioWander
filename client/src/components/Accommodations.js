@@ -35,7 +35,7 @@ export default function Accommodations() {
           >
             <input
               id="placeinp"
-              className="rounded-pill px-3"
+              className="rounded-pill px-3 accmdtn-inp"
               placeholder="Enter location"
               type={"search"}
               style={{
