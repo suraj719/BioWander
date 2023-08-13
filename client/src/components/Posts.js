@@ -57,7 +57,7 @@ export default function Posts() {
               name: user.displayName,
             }),
           }).then((res) => {
-            navigate("/posts");
+            window.location.reload();
           });
         };
         reader.onerror = (error) => {
@@ -78,8 +78,7 @@ export default function Posts() {
             name: user.displayName,
           }),
         }).then((res) => {
-          console.log(res);
-          navigate("/posts");
+          window.location.reload();
         });
       }
       // setIsloading(false);
@@ -135,7 +134,7 @@ export default function Posts() {
                         <form className="">
                           <input
                             required
-                            type={"text"}
+                            type="text"
                             className="rounded border-1 px-3"
                             placeholder="Title"
                             style={{ width: "100%" }}
@@ -144,7 +143,7 @@ export default function Posts() {
                           <br />
                           <input
                             required
-                            type={"text"}
+                            type="text"
                             className="rounded mt-2 px-3"
                             placeholder="Caption"
                             style={{ width: "100%" }}
@@ -208,49 +207,5 @@ export default function Posts() {
         </div>
       </div>
     </>
-    // <div className=" w-full h-100 ">
-    //   <div className="flex h-full ">
-    //     {/* All questions field */}
-
-    //     <div className="w-full">
-    //       <div className="w-4/5 m-auto  p-4 flex flex-col gap-16 ">
-    //         {isloading ? (
-    //           <>
-    //             <div className="w-full h-full">
-    //                 <Loader />
-    //             </div>
-    //           </>
-    //         ) : (
-    //           <>
-    //             <div className="flex flex-col gap-6 text-white overflow-x-none min-h-[70vh]">
-    //               {questions.map((post,index) => {
-    //                 return (
-    //                   <div key={index}>
-    //                     <div
-    //                       className="border-t flex gap-2 px-4 py-2 flex-col"
-    //                       style={{
-    //                         overflow: "hidden",
-    //                         textOverflow: "ellipsis",
-    //                         whiteSpace: "nowrap",
-    //                         width: "60rem",
-    //                       }}
-    //                     >
-    //                       <Link to={`/posts/${post._id}`}>
-    //                         <p className="text-2xl font-bold">{post.title}</p>
-    //                       </Link>
-    //                       <p className="text-ellipsis line-clamp-1">
-    //                         {post.description}
-    //                       </p>
-    //                     </div>
-    //                   </div>
-    //                 );
-    //               })}
-    //             </div>
-    //           </>
-    //         )}
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
